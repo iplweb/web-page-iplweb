@@ -116,6 +116,7 @@ export const translations = {
 
     // Contact
     "contact.title": "Zapraszam do kontaktu",
+    "contact.why.title": "Dlaczego warto ze mną współpracować?",
     "contact.subtitle":
       "Masz projekt do realizacji? Potrzebujesz konsultacji? Napisz do mnie - chętnie omówimy Twoje potrzeby.",
     "contact.form.name": "Imię i nazwisko",
@@ -236,6 +237,7 @@ export const translations = {
 
     // Contact
     "contact.title": "Get in Touch",
+    "contact.why.title": "Why work with me?",
     "contact.subtitle":
       "Have a project to implement? Need consultation? Write to me - I'd be happy to discuss your needs.",
     "contact.form.name": "Full Name",

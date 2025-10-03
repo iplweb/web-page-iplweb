@@ -8,6 +8,14 @@ import { useI18n } from "@/lib/i18n"
 export function Footer() {
   const { t } = useI18n()
 
+  const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, sectionId: string) => {
+    e.preventDefault()
+    const section = document.getElementById(sectionId)
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth", block: "start" })
+    }
+  }
+
   return (
     <footer className="bg-muted/50 border-t">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -27,7 +35,7 @@ export function Footer() {
             <h3 className="font-semibold mb-4">{t("footer.services")}</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>
-                <Link href="#uslugi" className="hover:text-primary transition-colors">
+                <Link href="#uslugi" className="hover:text-primary transition-colors" onClick={(e) => scrollToSection(e, "uslugi")}>
                   {t("services.custom.title")}
                 </Link>
               </li>
@@ -42,12 +50,12 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <Link href="#uslugi" className="hover:text-primary transition-colors">
+                <Link href="#uslugi" className="hover:text-primary transition-colors" onClick={(e) => scrollToSection(e, "uslugi")}>
                   {t("services.integration.title")}
                 </Link>
               </li>
               <li>
-                <Link href="#uslugi" className="hover:text-primary transition-colors">
+                <Link href="#uslugi" className="hover:text-primary transition-colors" onClick={(e) => scrollToSection(e, "uslugi")}>
                   {t("services.ai.title")}
                 </Link>
               </li>
@@ -58,22 +66,22 @@ export function Footer() {
             <h3 className="font-semibold mb-4">{t("footer.company")}</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>
-                <Link href="#portfolio" className="hover:text-primary transition-colors">
+                <Link href="#portfolio" className="hover:text-primary transition-colors" onClick={(e) => scrollToSection(e, "portfolio")}>
                   {t("nav.portfolio")}
                 </Link>
               </li>
               <li>
-                <Link href="#prezentacje" className="hover:text-primary transition-colors">
+                <Link href="#prezentacje" className="hover:text-primary transition-colors" onClick={(e) => scrollToSection(e, "prezentacje")}>
                   {t("nav.presentations")}
                 </Link>
               </li>
               <li>
-                <Link href="#kontakt" className="hover:text-primary transition-colors">
+                <Link href="#kontakt" className="hover:text-primary transition-colors" onClick={(e) => scrollToSection(e, "kontakt")}>
                   {t("nav.contact")}
                 </Link>
               </li>
               <li>
-                <Link href="#o-mnie" className="hover:text-primary transition-colors">
+                <Link href="#o-mnie" className="hover:text-primary transition-colors" onClick={(e) => scrollToSection(e, "o-mnie")}>
                   {t("nav.about")}
                 </Link>
               </li>

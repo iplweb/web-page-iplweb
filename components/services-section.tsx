@@ -4,6 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button"
 import { Code2, Database, Cog, Puzzle, Brain } from "lucide-react"
 import Image from "next/image"
+import Link from "next/link"
 import { useI18n } from "@/lib/i18n"
 
 export function ServicesSection() {
@@ -32,7 +33,8 @@ export function ServicesSection() {
       titleKey: "services.ai.title",
       descriptionKey: "services.ai.description",
       techKey: "services.ai.tech",
-      isExternal: false,
+      isExternal: true,
+      externalUrl: "https://ai.iplweb.pl/",
     },
     {
       icon: Code2,
@@ -73,49 +75,70 @@ export function ServicesSection() {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => (
-            <Card key={index} className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-              <CardHeader>
-                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
-                  {service.customIcon ? (
-                    <Image
-                      src={service.customIcon || "/placeholder.svg"}
-                      alt={t(service.titleKey)}
-                      width={24}
-                      height={24}
-                      className="object-contain"
-                    />
-                  ) : (
-                    <service.icon className="h-6 w-6 text-primary" />
-                  )}
-                </div>
-                <CardTitle className="text-xl">{t(service.titleKey)}</CardTitle>
-                <CardDescription className="text-base leading-relaxed">{t(service.descriptionKey)}</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="mb-6">
-                  <p className="text-sm text-muted-foreground">
-                    <span className="font-medium">{t("about.technologies.title")}: </span>
-                    {t(service.techKey)}
-                  </p>
-                </div>
-                <Button
-                  variant="outline"
-                  className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors bg-transparent"
-                  onClick={service.isExternal ? undefined : scrollToContact}
-                  asChild={service.isExternal}
+          {services.map((service, index) => {
+            const cardContent = (
+              <>
+                <CardHeader>
+                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
+                    {service.customIcon ? (
+                      <Image
+                        src={service.customIcon || "/placeholder.svg"}
+                        alt={t(service.titleKey)}
+                        width={24}
+                        height={24}
+                        className="object-contain"
+                      />
+                    ) : (
+                      <service.icon className="h-6 w-6 text-primary" />
+                    )}
+                  </div>
+                  <CardTitle className="text-xl">{t(service.titleKey)}</CardTitle>
+                  <CardDescription className="text-base leading-relaxed">{t(service.descriptionKey)}</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <div className="mb-6">
+                    <p className="text-sm text-muted-foreground">
+                      <span className="font-medium">{t("about.technologies.title")}: </span>
+                      {t(service.techKey)}
+                    </p>
+                  </div>
+                  <Button
+                    variant="outline"
+                    className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors bg-transparent"
+                    asChild
+                  >
+                    <span>{t("services.learn_more")}</span>
+                  </Button>
+                </CardContent>
+              </>
+            )
+
+            if (service.isExternal) {
+              return (
+                <Link
+                  key={index}
+                  href={service.externalUrl || ""}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block"
                 >
-                  {service.isExternal ? (
-                    <a href={service.externalUrl} target="_blank" rel="noopener noreferrer">
-                      {t("services.learn_more")}
-                    </a>
-                  ) : (
-                    t("services.learn_more")
-                  )}
-                </Button>
-              </CardContent>
-            </Card>
-          ))}
+                  <Card className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1 cursor-pointer h-full">
+                    {cardContent}
+                  </Card>
+                </Link>
+              )
+            }
+
+            return (
+              <Card
+                key={index}
+                onClick={scrollToContact}
+                className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1 cursor-pointer"
+              >
+                {cardContent}
+              </Card>
+            )
+          })}
         </div>
       </div>
     </section>

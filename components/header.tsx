@@ -12,16 +12,17 @@ export function Header() {
   const { t } = useI18n()
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
-  const scrollToContact = () => {
-    const contactSection = document.getElementById("kontakt")
-    if (contactSection) {
-      contactSection.scrollIntoView({ behavior: "smooth" })
+  const scrollToSection = (sectionId: string) => {
+    const section = document.getElementById(sectionId)
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth", block: "start" })
     }
     setIsMobileMenuOpen(false)
   }
 
-  const handleNavClick = () => {
-    setIsMobileMenuOpen(false)
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, sectionId: string) => {
+    e.preventDefault()
+    scrollToSection(sectionId)
   }
 
   return (
@@ -41,26 +42,46 @@ export function Header() {
           </div>
 
           <nav className="hidden md:flex items-center space-x-8">
-            <Link href="#uslugi" className="text-sm font-medium hover:text-primary transition-colors">
+            <Link
+              href="#uslugi"
+              className="text-sm font-medium hover:text-primary transition-colors"
+              onClick={(e) => handleNavClick(e, "uslugi")}
+            >
               {t("nav.services")}
             </Link>
-            <Link href="#portfolio" className="text-sm font-medium hover:text-primary transition-colors">
+            <Link
+              href="#portfolio"
+              className="text-sm font-medium hover:text-primary transition-colors"
+              onClick={(e) => handleNavClick(e, "portfolio")}
+            >
               {t("nav.portfolio")}
             </Link>
-            <Link href="#prezentacje" className="text-sm font-medium hover:text-primary transition-colors">
+            <Link
+              href="#prezentacje"
+              className="text-sm font-medium hover:text-primary transition-colors"
+              onClick={(e) => handleNavClick(e, "prezentacje")}
+            >
               {t("nav.presentations")}
             </Link>
-            <Link href="#o-mnie" className="text-sm font-medium hover:text-primary transition-colors">
+            <Link
+              href="#o-mnie"
+              className="text-sm font-medium hover:text-primary transition-colors"
+              onClick={(e) => handleNavClick(e, "o-mnie")}
+            >
               {t("nav.about")}
             </Link>
-            <Link href="#kontakt" className="text-sm font-medium hover:text-primary transition-colors">
+            <Link
+              href="#kontakt"
+              className="text-sm font-medium hover:text-primary transition-colors"
+              onClick={(e) => handleNavClick(e, "kontakt")}
+            >
               {t("nav.contact")}
             </Link>
           </nav>
 
           <div className="flex items-center gap-4">
             <LanguageSwitcher />
-            <Button onClick={scrollToContact} className="hidden md:inline-flex">
+            <Button onClick={() => scrollToSection("kontakt")} className="hidden md:inline-flex">
               {t("nav.contact")}
             </Button>
             <Button
@@ -81,39 +102,39 @@ export function Header() {
               <Link
                 href="#uslugi"
                 className="text-sm font-medium hover:text-primary transition-colors"
-                onClick={handleNavClick}
+                onClick={(e) => handleNavClick(e, "uslugi")}
               >
                 {t("nav.services")}
               </Link>
               <Link
                 href="#portfolio"
                 className="text-sm font-medium hover:text-primary transition-colors"
-                onClick={handleNavClick}
+                onClick={(e) => handleNavClick(e, "portfolio")}
               >
                 {t("nav.portfolio")}
               </Link>
               <Link
                 href="#prezentacje"
                 className="text-sm font-medium hover:text-primary transition-colors"
-                onClick={handleNavClick}
+                onClick={(e) => handleNavClick(e, "prezentacje")}
               >
                 {t("nav.presentations")}
               </Link>
               <Link
                 href="#o-mnie"
                 className="text-sm font-medium hover:text-primary transition-colors"
-                onClick={handleNavClick}
+                onClick={(e) => handleNavClick(e, "o-mnie")}
               >
                 {t("nav.about")}
               </Link>
               <Link
                 href="#kontakt"
                 className="text-sm font-medium hover:text-primary transition-colors"
-                onClick={handleNavClick}
+                onClick={(e) => handleNavClick(e, "kontakt")}
               >
                 {t("nav.contact")}
               </Link>
-              <Button onClick={scrollToContact} className="w-full mt-4">
+              <Button onClick={() => scrollToSection("kontakt")} className="w-full mt-4">
                 {t("nav.contact")}
               </Button>
             </nav>
