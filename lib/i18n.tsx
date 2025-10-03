@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect, createContext, useContext, type ReactNode } from "react"
+import { useState, useEffect, useLayoutEffect, createContext, useContext, type ReactNode } from "react"
 
 export type Language = "pl" | "en"
 
@@ -268,17 +268,23 @@ function detectBrowserLanguage(): Language {
 }
 
 export function I18nProvider({ children }: { children: ReactNode }) {
+  // Always start with "pl" to avoid hydration mismatch
   const [language, setLanguage] = useState<Language>("pl")
+  const [isInitialized, setIsInitialized] = useState(false)
 
-  useEffect(() => {
+  // Use useLayoutEffect to check language before paint
+  useLayoutEffect(() => {
+    // Check localStorage for saved language preference
     const savedLang = localStorage.getItem("language") as Language
     if (savedLang && (savedLang === "pl" || savedLang === "en")) {
       setLanguage(savedLang)
     } else {
+      // Detect browser language
       const detectedLang = detectBrowserLanguage()
       setLanguage(detectedLang)
       localStorage.setItem("language", detectedLang)
     }
+    setIsInitialized(true)
   }, [])
 
   const handleSetLanguage = (lang: Language) => {
@@ -290,7 +296,16 @@ export function I18nProvider({ children }: { children: ReactNode }) {
     return translations[language][key as keyof (typeof translations)[typeof language]] || key
   }
 
-  return <I18nContext.Provider value={{ language, setLanguage: handleSetLanguage, t }}>{children}</I18nContext.Provider>
+  return (
+    <I18nContext.Provider value={{ language, setLanguage: handleSetLanguage, t }}>
+      <div style={{
+        opacity: isInitialized ? 1 : 0,
+        transition: 'opacity 0.1s ease-in-out'
+      }}>
+        {children}
+      </div>
+    </I18nContext.Provider>
+  )
 }
 
 export function useI18n() {

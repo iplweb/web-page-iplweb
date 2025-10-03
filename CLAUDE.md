@@ -33,6 +33,8 @@ pnpm start
 pnpm lint
 ```
 
+**Note:** The user typically runs the test server in a separate window, so there's no need to start it during development/testing.
+
 ## Architecture
 
 ### File Structure Pattern
