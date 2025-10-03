@@ -11,9 +11,9 @@ export function ContactSection() {
     {
       icon: Mail,
       titleKey: "contact.info.email",
-      content: "michal.dtz@gmail.com",
+      content: "m+ipl@iplweb.pl",
       isLink: true,
-      href: "mailto:michal.dtz@gmail.com",
+      href: "mailto:m+ipl@iplweb.pl",
     },
     {
       icon: Phone,
