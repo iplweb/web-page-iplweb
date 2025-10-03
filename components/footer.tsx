@@ -2,7 +2,7 @@
 
 import Image from "next/image"
 import Link from "next/link"
-import { Mail, Phone, MapPin } from "lucide-react"
+import { Mail, Phone, Twitter } from "lucide-react"
 import { useI18n } from "@/lib/i18n"
 
 export function Footer() {
@@ -100,8 +100,10 @@ export function Footer() {
                 <span>+48 793 66 87 33</span>
               </li>
               <li className="flex items-center space-x-2">
-                <MapPin className="h-4 w-4" />
-                <span>20-388 Dominów 115M-2</span>
+                <Twitter className="h-4 w-4" />
+                <a href="https://twitter.com/mpasternak79" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+                  @mpasternak79
+                </a>
               </li>
             </ul>
           </div>

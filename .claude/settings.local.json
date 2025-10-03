@@ -5,7 +5,9 @@
       "Bash(pnpm build:*)",
       "Bash(pnpm install:*)",
       "Bash(make:*)",
-      "Bash(pnpm dev:*)"
+      "Bash(pnpm dev:*)",
+      "Bash(npm install:*)",
+      "Bash(pnpm:*)"
     ],
     "deny": [],
     "ask": []
