@@ -25,13 +25,13 @@ export const translations = {
     // Hero Section
     "hero.title": "Specjalistyczne oprogramowanie na zamówienie",
     "hero.subtitle":
-      "Tworzę zaawansowane rozwiązania informatyczne dla instytucji naukowych, bibliotek i firm. Ponad 30 lat doświadczenia w programowaniu.",
+      "Zaawansowane rozwiązania informatyczne dla instytucji naukowych, bibliotek i firm. Ponad 30 lat doświadczenia w programowaniu.",
     "hero.cta": "Poznaj moje usługi",
 
     // Services
-    "services.title": "Moje usługi",
+    "services.title": "Usługi",
     "services.subtitle":
-      "Specjalizuję się w tworzeniu oprogramowania na zamówienie oraz wsparciu systemów informatycznych",
+      "Tworzenie oprogramowania na zamówienie oraz wsparcie systemów informatycznych",
     "services.bpp.title": "Bibliografia Publikacji Pracowników",
     "services.bpp.description":
       "Kompleksowy system do zarządzania bibliografią publikacji naukowych pracowników instytucji. Rozwój i wsparcie oprogramowania Bibliografia Publikacji Pracowników oraz wsparcie w ewaluacji.",
@@ -59,7 +59,7 @@ export const translations = {
     "services.learn_more": "Dowiedz się więcej",
 
     // Portfolio
-    "portfolio.title": "Moje portfolio",
+    "portfolio.title": "Portfolio",
     "portfolio.subtitle": "Przykłady zrealizowanych projektów i rozwiązań",
     "portfolio.bpp.title": "Bibliografia Publikacji Pracowników",
     "portfolio.bpp.description":
@@ -76,7 +76,7 @@ export const translations = {
     "portfolio.visit": "Odwiedź stronę",
 
     // Presentations
-    "presentations.title": "Moje prezentacje",
+    "presentations.title": "Prezentacje",
     "presentations.subtitle": "Wystąpienia i prezentacje na konferencjach technicznych",
     "presentations.python_django.title": "10 lat z Pythonem i Django",
     "presentations.python_django.description":
@@ -90,11 +90,11 @@ export const translations = {
     "about.title": "O iplweb",
     "about.intro.name": "Michał Pasternak",
     "about.intro.description":
-      "Programuję z pasją od wielu lat. Fascynuje mnie rozwój technologii, która zwiększa ludzkie możliwości - od systemów wspierających naukę po sztuczną inteligencję w medycynie. Każda linia kodu to krok w kierunku lepszej przyszłości dla ludzkości.",
+      "Programowanie jest moją pasją od wielu lat. Fascynuje mnie rozwój technologii zwiększającej ludzkie możliwości - od systemów wspierających naukę po sztuczną inteligencję w medycynie. Każda linia kodu to krok w kierunku lepszej przyszłości dla ludzkości.",
     "about.company.description":
       "Nazywam się Michał Pasternak i pod marką iplweb prowadzę moją działalność informatyczną. Specjalizuję się w tworzeniu oprogramowania na zamówienie dla instytucji naukowych, bibliotek i firm potrzebujących zaawansowanych rozwiązań informatycznych.",
     "about.experience.description":
-      "Moje doświadczenie obejmuje szczególnie systemy repozytoryjne, platformy DSpace, integracje bibliotecznych systemów informatycznych oraz rozwiązania IT dla sektora medycznego, w tym anestezjologii. Tworzę rozwiązania, które wspierają zarządzanie informacją naukową, badam możliwości użycia technologii w celu podniesienia bezpieczeństwa w medycynie.",
+      "Doświadczenie obejmuje szczególnie systemy repozytoryjne, platformy DSpace, integracje bibliotecznych systemów informatycznych oraz rozwiązania IT dla sektora medycznego, w tym anestezjologii. Realizowane rozwiązania wspierają zarządzanie informacją naukową oraz wykorzystanie technologii w celu podniesienia bezpieczeństwa w medycynie.",
     "about.stats.experience": "30+ lat doświadczenia",
     "about.stats.experience_hover": "Kawał czasu",
     "about.stats.experience_hover_subtitle": "Mój pierwszy komputer to Timex 2048!",
@@ -105,7 +105,7 @@ export const translations = {
     "about.stats.code": "∞ Linii kodu napisanych z pasją",
     "about.stats.code_hover": "Przestałem liczyć",
     "about.stats.code_desc": "napisanych z pasją",
-    "about.technologies.title": "Technologie z którymi pracuję",
+    "about.technologies.title": "Technologie, z którymi pracuję",
     "about.why.title": "Dlaczego warto ze mną współpracować?",
     "about.why.reliability": "Solidność i niezawodność",
     "about.why.reliability_desc": "Każdy projekt traktuję z pełnym zaangażowaniem",
@@ -118,7 +118,7 @@ export const translations = {
     "contact.title": "Zapraszam do kontaktu",
     "contact.why.title": "Dlaczego warto ze mną współpracować?",
     "contact.subtitle":
-      "Masz projekt do realizacji? Potrzebujesz konsultacji? Napisz do mnie - chętnie omówimy Twoje potrzeby.",
+      "Zapraszam do kontaktu w sprawie realizacji projektów oraz konsultacji. Wspólnie omówimy Państwa potrzeby i znajdziemy optymalne rozwiązania.",
     "contact.form.name": "Imię i nazwisko",
     "contact.form.email": "Adres e-mail",
     "contact.form.message": "Wiadomość",
@@ -148,12 +148,12 @@ export const translations = {
     // Hero Section
     "hero.title": "Custom Software Solutions",
     "hero.subtitle":
-      "I create advanced IT solutions for scientific institutions, libraries, and companies. Over 30 years of programming experience.",
-    "hero.cta": "Explore My Services",
+      "Advanced IT solutions for scientific institutions, libraries, and companies. Over 30 years of programming experience.",
+    "hero.cta": "Explore Services",
 
     // Services
-    "services.title": "My Services",
-    "services.subtitle": "I specialize in custom software development and IT systems support",
+    "services.title": "Services",
+    "services.subtitle": "Custom software development and IT systems support",
     "services.bpp.title": "Employee Publications Bibliography",
     "services.bpp.description":
       "Comprehensive system for managing scientific publications bibliography of institutional employees. Development and support of the Employee Publications Bibliography software and evaluation support.",
@@ -181,7 +181,7 @@ export const translations = {
     "services.learn_more": "Learn More",
 
     // Portfolio
-    "portfolio.title": "My Portfolio",
+    "portfolio.title": "Portfolio",
     "portfolio.subtitle": "Examples of completed projects and solutions",
     "portfolio.bpp.title": "Employee Publications Bibliography",
     "portfolio.bpp.description":
@@ -197,7 +197,7 @@ export const translations = {
     "portfolio.visit": "Visit Site",
 
     // Presentations
-    "presentations.title": "My Presentations",
+    "presentations.title": "Presentations",
     "presentations.subtitle": "Talks and presentations at technical conferences",
     "presentations.python_django.title": "10 Years with Python and Django",
     "presentations.python_django.description":
@@ -211,11 +211,11 @@ export const translations = {
     "about.title": "About iplweb",
     "about.intro.name": "Michał Pasternak",
     "about.intro.description":
-      "I have been programming with passion for many years. I am fascinated by the development of technology that increases human capabilities - from systems supporting science to artificial intelligence in medicine. Every line of code is a step towards a better future for humanity.",
+      "Programming has been my passion for many years. I am fascinated by the development of technology that enhances human capabilities - from systems supporting science to artificial intelligence in medicine. Every line of code represents a step towards a better future for humanity.",
     "about.company.description":
-      "My name is Michał Pasternak and I run my IT business under the iplweb brand. I specialize in creating custom software for scientific institutions, libraries, and companies that need advanced IT solutions.",
+      "Michał Pasternak operates under the iplweb brand, specializing in custom software development for scientific institutions, libraries, and companies requiring advanced IT solutions.",
     "about.experience.description":
-      "My experience particularly includes repository systems, DSpace platforms, library information system integrations, and IT solutions for the medical sector, including anesthesiology. I create solutions that support scientific information management and research the possibilities of using technology to improve safety in medicine.",
+      "The experience encompasses repository systems, DSpace platforms, library information system integrations, and IT solutions for the medical sector, including anesthesiology. Delivered solutions support scientific information management and leverage technology to enhance safety in medicine.",
     "about.stats.experience": "30+ years of experience",
     "about.stats.experience_hover": "Quite a while",
     "about.stats.experience_hover_subtitle": "My first computer was Timex 2048!",
@@ -239,7 +239,7 @@ export const translations = {
     "contact.title": "Get in Touch",
     "contact.why.title": "Why work with me?",
     "contact.subtitle":
-      "Have a project to implement? Need consultation? Write to me - I'd be happy to discuss your needs.",
+      "For project inquiries and consultations, please reach out to discuss your requirements and explore optimal solutions.",
     "contact.form.name": "Full Name",
     "contact.form.email": "Email Address",
     "contact.form.message": "Message",

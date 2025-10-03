@@ -46,30 +46,29 @@ export function ContactSection() {
               <h3 className="text-2xl font-bold mb-6 text-center">{t("contact.info.title")}</h3>
               <div className="grid md:grid-cols-3 gap-6">
                 {contactInfo.map((info, index) => (
-                  <Card key={index} className="group hover:shadow-lg transition-all duration-300">
-                    <CardContent className="p-6 text-center">
-                      <div className="flex flex-col items-center space-y-4">
-                        <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                          <info.icon className="h-6 w-6 text-primary" />
-                        </div>
-                        <div>
-                          <h4 className="font-semibold mb-1">{t(info.titleKey)}</h4>
-                          {info.isLink ? (
-                            <a
-                              href={info.href}
-                              className="text-primary font-medium hover:underline"
-                              target={info.external ? "_blank" : undefined}
-                              rel={info.external ? "noopener noreferrer" : undefined}
-                            >
+                  <a
+                    key={index}
+                    href={info.href}
+                    className="block"
+                    target={info.external ? "_blank" : undefined}
+                    rel={info.external ? "noopener noreferrer" : undefined}
+                  >
+                    <Card className="group hover:shadow-lg transition-all duration-300 h-full cursor-pointer">
+                      <CardContent className="p-6 text-center">
+                        <div className="flex flex-col items-center space-y-4">
+                          <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                            <info.icon className="h-6 w-6 text-primary" />
+                          </div>
+                          <div>
+                            <h4 className="font-semibold mb-1">{t(info.titleKey)}</h4>
+                            <p className="text-primary font-medium">
                               {info.contentKey ? t(info.contentKey) : info.content}
-                            </a>
-                          ) : (
-                            <p className="text-primary font-medium">{info.content}</p>
-                          )}
+                            </p>
+                          </div>
                         </div>
-                      </div>
-                    </CardContent>
-                  </Card>
+                      </CardContent>
+                    </Card>
+                  </a>
                 ))}
               </div>
             </div>
