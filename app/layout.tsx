@@ -106,7 +106,7 @@ export default function RootLayout({
               logo: "https://iplweb.pl/logo.png",
               image: "https://iplweb.pl/og-image.png",
               telephone: "+48-81-5375575",
-              email: "michal.pasternak@iplweb.pl",
+              email: "m+ipl@iplweb.pl",
               address: {
                 "@type": "PostalAddress",
                 addressCountry: "PL",
@@ -116,7 +116,6 @@ export default function RootLayout({
                 "@type": "Person",
                 name: "Michał Pasternak",
               },
-              sameAs: ["https://github.com/mpasternak", "https://www.linkedin.com/in/michalpasternak"],
               areaServed: {
                 "@type": "Country",
                 name: "Poland",
