@@ -50,14 +50,34 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <Link href="#uslugi" className="hover:text-primary transition-colors" onClick={(e) => scrollToSection(e, "uslugi")}>
+                <a
+                  href="https://dkp.iplweb.pl"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-primary transition-colors"
+                >
                   {t("services.integration.title")}
-                </Link>
+                </a>
               </li>
               <li>
-                <Link href="#uslugi" className="hover:text-primary transition-colors" onClick={(e) => scrollToSection(e, "uslugi")}>
+                <a
+                  href="https://ai.iplweb.pl/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-primary transition-colors"
+                >
                   {t("services.ai.title")}
-                </Link>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://bpp.iplweb.pl/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-primary transition-colors"
+                >
+                  {t("services.bpp.title")}
+                </a>
               </li>
             </ul>
           </div>
@@ -84,6 +104,16 @@ export function Footer() {
                 <Link href="#o-mnie" className="hover:text-primary transition-colors" onClick={(e) => scrollToSection(e, "o-mnie")}>
                   {t("nav.about")}
                 </Link>
+              </li>
+              <li>
+                <a
+                  href="https://status.iplweb.pl"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-primary transition-colors"
+                >
+                  {t("footer.service_status")}
+                </a>
               </li>
             </ul>
           </div>

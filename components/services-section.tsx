@@ -48,7 +48,8 @@ export function ServicesSection() {
       titleKey: "services.integration.title",
       descriptionKey: "services.integration.description",
       techKey: "services.integration.tech",
-      isExternal: false,
+      isExternal: true,
+      externalUrl: "https://dkp.iplweb.pl",
     },
     {
       icon: Cog,

@@ -48,10 +48,11 @@ export const translations = {
     "services.custom.description":
       "Projektowanie i implementacja dedykowanych aplikacji webowych dostosowanych do specyficznych wymagań biznesowych.",
     "services.custom.tech": "Python, Django, JavaScript, PostgreSQL",
-    "services.integration.title": "Integracje systemów",
+    "services.integration.title": "Poprawa komunikacji śródszpitalnej",
     "services.integration.description":
-      "Łączenie różnych systemów informatycznych, API, migracja danych oraz automatyzacja procesów biznesowych.",
+      "System DKP usprawnia komunikację pomiędzy anestezjologiem a pielęgniarką na oddziale i operatorem, umożliwiając efektywną wymianę informacji o pacjentach, zmniejszenie przestojów i nadzór nad czasem wykorzystania sal operacyjnych.",
     "services.integration.tech": "REST API, Python, Twisted, PostgreSQL",
+    "services.integration.link": "https://dkp.iplweb.pl",
     "services.consulting.title": "Konsultacje IT",
     "services.consulting.description":
       "Doradztwo w zakresie architektury systemów, wyboru technologii i strategii digitalizacji.",
@@ -135,6 +136,7 @@ export const translations = {
     "footer.services": "Usługi",
     "footer.contact": "Kontakt",
     "footer.rights": "Wszystkie prawa zastrzeżone.",
+    "footer.service_status": "Status usług",
   },
   en: {
     // Navigation
@@ -170,10 +172,11 @@ export const translations = {
     "services.custom.description":
       "Design and implementation of dedicated web applications tailored to specific business requirements.",
     "services.custom.tech": "Python, Django, JavaScript, PostgreSQL",
-    "services.integration.title": "System Integrations",
+    "services.integration.title": "Improving Intra-Hospital Communication",
     "services.integration.description":
-      "Connecting various IT systems, APIs, data migration, and business process automation.",
+      "DKP system streamlines communication between anesthesiologist, ward nurse, and operator, enabling efficient patient information exchange, reducing downtime, and monitoring operating room time utilization.",
     "services.integration.tech": "REST API, Python, Twisted, PostgreSQL",
+    "services.integration.link": "https://dkp.iplweb.pl",
     "services.consulting.title": "IT Consulting",
     "services.consulting.description":
       "Consulting in system architecture, technology selection, and digitization strategy.",
@@ -256,6 +259,7 @@ export const translations = {
     "footer.services": "Services",
     "footer.contact": "Contact",
     "footer.rights": "All rights reserved.",
+    "footer.service_status": "Service Status",
   },
 }
 
